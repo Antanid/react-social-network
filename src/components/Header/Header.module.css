@@ -1,0 +1,12 @@
+.header{
+    min-height: 60px;
+    background-color: aqua;
+  }
+  .instImg{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 40px;
+    height: auto;
+  }
+
+  

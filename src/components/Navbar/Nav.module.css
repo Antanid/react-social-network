@@ -1,0 +1,24 @@
+.nav{
+    margin-top: 5px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
+  .manu__nav{
+    list-style-type: none;
+    padding: 10px;
+  }
+  .li__nav a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+ .li__nav a:hover{
+   color: rgb(88, 135, 235);
+ }
+
+ 
