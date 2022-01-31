@@ -1,11 +1,12 @@
+import { propTypes } from 'react-bootstrap/esm/Image';
 import post from './MyPost.module.css'
-const Post = () =>{
+const Post = (props) =>{
     return(
         <div className={post.post}>
         <img src="https://www.meme-arsenal.com/memes/6d0fce2ab076987859e93863e01d75f9.jpg" alt="" />
-        Post 1
+        <span className={post.text}>{ props.message }</span>
         <div>
-        <span>Like</span>
+        <span className={post.like}> <a href='/'>Like</a> {props.like}</span>
         </div>
         </div>
     );
