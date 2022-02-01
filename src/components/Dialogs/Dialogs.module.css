@@ -1,0 +1,16 @@
+
+.chat{
+    padding: 10px;
+    max-height: 200px;
+    border: black 1px solid;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.ch{
+    border: 1px solid black;
+    margin-top: 6px;
+    max-height: 300px;
+    padding: 8px;
+    border-radius: 10px;
+}
