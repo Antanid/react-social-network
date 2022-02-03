@@ -10,6 +10,8 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Setting from './components/Setting/Setting';
 import { propTypes } from 'react-bootstrap/esm/Image';
+import Friend from './components/Friends/Friends';
+import friendList from './components/Friends/FriendsHeader/headerFriend';
 
 
 const App = (props) => {
@@ -29,6 +31,7 @@ const App = (props) => {
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />
             <Route path="/setting" element={<Setting/>} />
+            <Route path='/Friends' element={<Friend/>}/>
           </Routes>
           
         </div>
