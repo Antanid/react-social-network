@@ -1,9 +1,11 @@
 import MyPos from './MyPosts.module.css';
 import Post from './Posts/Post';
 const MyPosts = (props) => {
-
-  
   let PostsMassive = props.postData.map(p => <Post message={p.message} like={p.like} />);
+
+  let addPost = () =>{
+    alert('Learn javas')
+  }
 
   return (
     <div>
@@ -13,7 +15,7 @@ const MyPosts = (props) => {
           <div>
           <textarea></textarea>
           </div>
-          <button>Add post</button>
+          <button onClick={addPost}>Add post</button>
         </div>
       </div>
       {PostsMassive}
