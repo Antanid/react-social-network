@@ -8,8 +8,15 @@
 .name{
     color: black;
     text-decoration: none;
-    padding-top: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
 }
 .name .active{
     color: red;
+}
+
+.ava{
+    width: 20%;
+    border-radius: 20px;
+    
 }

@@ -5,12 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route } from 'react-router-dom';
 import State from './Redux/State';
-import Dialogs from './components/Dialogs/Dialogs';
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <App state={State}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

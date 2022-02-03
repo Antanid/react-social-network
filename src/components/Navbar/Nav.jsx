@@ -10,6 +10,7 @@ const Nav = () => {
           <li className={nav.item}><NavLink className = { navData => navData.isActive ? nav.active : nav.item } to='/News'>News</NavLink></li>
           <li className={nav.item}><NavLink className = { navData => navData.isActive ? nav.active : nav.item } to='/Music'>Music</NavLink></li> <br></br>
           <li className={nav.item}><NavLink className = { navData => navData.isActive ? nav.active : nav.item } to='/Setting'>Settings</NavLink></li>
+          
         </ul>
 
       </nav>

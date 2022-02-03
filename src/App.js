@@ -22,8 +22,10 @@ const App = (props) => {
           <Nav />
           
           <Routes>
-            <Route exact='' path="/Dialogs/*" element={<Dialogs/>}/>
-            <Route path="/profile" element={<Profile/>} />
+            <Route exact='' path="/Dialogs/*" element={<Dialogs state={props.state.dialogPage} state={props.state.dialogPage} state={props.state.dialogPage}/>}/>
+
+            <Route path="/profile" element={<Profile post={props.state.profilePage}/>} />
+            
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />
             <Route path="/setting" element={<Setting/>} />

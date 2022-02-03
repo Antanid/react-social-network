@@ -1,14 +1,15 @@
 .message{
-    margin-left:80px;
-    padding-top: 10px;
-    display: flex;
     color: white;
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
 }
 
-.ava{
+
+.myAva{
+    margin-right: 10px;
     width: 4%;
     border-radius: 50px;
-    margin-right:5px;
 }
 
 .text{
@@ -16,5 +17,4 @@
     border-radius: 20px;
     padding: 5px;
     background-color: grey;
-    
 }

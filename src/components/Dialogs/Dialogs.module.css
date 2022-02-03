@@ -2,11 +2,12 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     margin-top: 5px;
-    background: rgba(19, 230, 245, 0.884);
+    background: #E0FFFF	;
     border: 1px solid black;
     border-radius: 10px;
     min-height: 200px;
 }
+
 
 
 

@@ -7,7 +7,7 @@ const ProfInfo = () => {
             </div>
 
             <div className={profInf.text}>
-                ContentProfile 9+ ava
+                ContentProfile + ava
             </div>
         </div>
     );
