@@ -9,7 +9,7 @@
     list-style-type: none;
     padding: 10px;
   }
-  .li__nav a{
+  .item a{
     color: black;
     font-size: 18px;
     text-decoration: none;
@@ -17,8 +17,9 @@
     text-align: center; 
   }
 
- .li__nav a:hover{
+ .item a:hover{
    color: rgb(88, 135, 235);
  }
-
- 
+ .item .active{
+   color: red;
+ }

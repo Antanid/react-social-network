@@ -10,3 +10,8 @@ border-radius: 30px;
     color: rgb(51, 15, 255);
     text-decoration: none;
 }
+
+.post{
+    padding-left: 10px;
+    padding-top: 5px;
+}

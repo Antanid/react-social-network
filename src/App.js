@@ -9,10 +9,10 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Setting from './components/Setting/Setting';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
 
-
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
     <div className='app-wrapper'>
@@ -22,7 +22,7 @@ const App = () => {
           <Nav />
           
           <Routes>
-            <Route path="/Dialogs" element={<Dialogs/>}/>
+            <Route exact='' path="/Dialogs/*" element={<Dialogs/>}/>
             <Route path="/profile" element={<Profile/>} />
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />
@@ -36,3 +36,6 @@ const App = () => {
   );
 }
 export default App;
+
+
+        
