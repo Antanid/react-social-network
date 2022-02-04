@@ -1,5 +1,6 @@
-import { rerenderEntireTree } from "../render";
-
+let rerenderEntireTree = () =>{
+  console.log('')
+}
 let State = {
 
 profilePage: {
@@ -43,7 +44,6 @@ myMessage: [
       likeCount: 0,
     }
     State.profilePage.posts.push(newPost);
-    State.profilePage.newPostText = '';
     rerenderEntireTree(State);
   }
 
@@ -68,6 +68,8 @@ export let newMyText = (textArea) => {
   rerenderEntireTree(State);
 }
 
-
+export let rakabaka = (observer) =>{
+  rerenderEntireTree = observer;
+}
 
 export default State;  
