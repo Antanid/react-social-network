@@ -7,7 +7,7 @@ const Profile = (props) => {
     <div className='col-lg-10'>
       <div className={prof.content}>
         <ProfInfo />
-        <MyPosts postData={props.post.posts}/>
+        <MyPosts updateNewPostText={props.updateNewPostText} postData={props.post.posts} addPost={props.addPost}/>
       </div>
     </div>
   );

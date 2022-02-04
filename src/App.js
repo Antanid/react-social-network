@@ -24,9 +24,9 @@ const App = (props) => {
           <Nav />
           
           <Routes>
-            <Route exact='' path="/Dialogs/*" element={<Dialogs state={props.state.dialogPage} state={props.state.dialogPage} state={props.state.dialogPage}/>}/>
+            <Route exact='' path="/Dialogs/*" element={<Dialogs newMyText={props.newMyText} ForMe={props.state.dialogPage.ForMe} newMes={props.newMes} state={props.state.dialogPage} myMes={props.myMes} newMyText={props.newMyText}/>}/>
 
-            <Route path="/profile" element={<Profile post={props.state.profilePage}/>} />
+            <Route path="/profile" element={<Profile updateNewPostText={props.updateNewPostText} post={props.state.profilePage} addPost={props.addPost} addPost={props.addPost}/>} />
             
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />

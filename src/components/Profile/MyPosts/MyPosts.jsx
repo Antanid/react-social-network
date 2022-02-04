@@ -1,13 +1,19 @@
 import MyPos from './MyPosts.module.css';
 import React from 'react';
 import Post from './Posts/Post';
+
 const MyPosts = (props) => {
   let PostsMassive = props.postData.map(p => <Post message={p.message} like={p.like} />);
 
-  let elementPost = React.createRef();
-  let addPost = () =>{
+ let elementPost = React.useRef();
+ 
+ let addPost= () =>{
+   props.addPost();
+ }
+  let onPostChange = () =>{
     let text = elementPost.current.value;
-    alert(text)
+    props.updateNewPostText(text);
+    console.log(text)
   }
 
   return (
@@ -16,7 +22,7 @@ const MyPosts = (props) => {
         My posts
         <div className={MyPos.newPosts}>
           <div>
-          <textarea ref={elementPost}></textarea>
+          <textarea onChange={onPostChange} ref={elementPost}/>
           </div>
           <button onClick={addPost}>Add post</button>
         </div>
