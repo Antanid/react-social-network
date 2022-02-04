@@ -16,5 +16,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 }
-rerenderEntireTree();
+rerenderEntireTgitree();
 rakabaka(rerenderEntireTree);
