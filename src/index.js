@@ -1,4 +1,4 @@
-import State, { rakabaka } from './Redux/State';
+import State, { subscribe } from './Redux/State';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -16,5 +16,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 }
-rerenderEntireTgitree();
-rakabaka(rerenderEntireTree);
+rerenderEntireTree();
+subscribe(rerenderEntireTree);

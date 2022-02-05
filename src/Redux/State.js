@@ -68,7 +68,7 @@ export let newMyText = (textArea) => {
   rerenderEntireTree(State);
 }
 
-export let rakabaka = (observer) =>{
+export const subscribe = (observer) =>{
   rerenderEntireTree = observer;
 }
 
