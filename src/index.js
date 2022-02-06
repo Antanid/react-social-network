@@ -1,20 +1,19 @@
-import State, { subscribe } from './Redux/State';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route } from 'react-router-dom';
-import { addPost, myMes, newMyText, updateNewPostText} from './Redux/State';
+import Store from './Redux/State';
 
 
 let rerenderEntireTree = () =>{
 ReactDOM.render(
   <React.StrictMode>
-    <App state={State} addPost={addPost} updateNewPostText={updateNewPostText} myMes={myMes} newMyText={newMyText}/>
+    <App state={Store.getState()} dispatch={Store.dispatch.bind(Store)} myMes={Store.myMes.bind(Store)} newMyText={Store.newMyText.bind(Store)}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 }
-rerenderEntireTree();
-subscribe(rerenderEntireTree);
+rerenderEntireTree(Store.getState());
+Store.subscribe(rerenderEntireTree);

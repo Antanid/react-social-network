@@ -17,7 +17,6 @@ const Dialogs = (props) => {
         let text = newMessage.current.value;
         props.myMes(text);
         props.newMyText('');
-
     }
 
     let textAre = () =>{
