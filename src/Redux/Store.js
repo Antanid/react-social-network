@@ -1,3 +1,9 @@
+import { type } from "@testing-library/user-event/dist/type";
+import dialogReducer from "./dialogReducer";
+import profileReducer from "./ProfileReducer";
+import sidebarReducer from "./sidebarReducer";
+
+
 let Store = {
 
   _State: {
@@ -31,52 +37,36 @@ let Store = {
         { id: 4, name: 'Vasya' },],
 
       ForMe: 'Priyom',
-    }
+    },
+    sidebar:{}
   },
+
+
   _rerenderEntireTree() {
     console.log('')
   },
-
   getState() {
     return this._State;
   },
   subscribe(observer) {
     this.rerenderEntireTree = observer;
   },
- 
-
-  myMes(myMessage) {
-    let addMyMess = {
-      id: 4,
-      img: 'https://i.pinimg.com/236x/db/e3/af/dbe3af6dfdf4e4c88831f8442fc3e567.jpg',
-      me: myMessage,
-    }
-    this._State.dialogPage.myMessage.push(addMyMess);
-    this.rerenderEntireTree(this._State);
-  },
-  newMyText(textArea) {
-    this._State.dialogPage.ForMe = textArea;
-    this.rerenderEntireTree(this._State);
-  },
 
 
-  dispatch(action){
-    if(action.type === 'ADD-POST'){
-      let newPost = {
-        id: 5,
-        message: this._State.profilePage.newPostText,
-        likeCount: 0,
-      }
-      this._State.profilePage.posts.push(newPost);
+
+  dispatch(action) {
+
+    this._State.dialogPage = dialogReducer(this._State.dialogPage, action);
+    this._State.profilePage = profileReducer(this._State.profilePage, action);
+    this._State.sidebar = sidebarReducer(this._State.sidebar, action);
       this.rerenderEntireTree(this._State);
-    } else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-      this._State.profilePage.newPostText = action.newText;
-    this.rerenderEntireTree(this._State);
-    }
   }
 
- 
 };
+
+
+
+
 
 export default Store;
 

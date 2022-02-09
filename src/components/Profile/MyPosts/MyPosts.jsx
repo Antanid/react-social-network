@@ -1,21 +1,22 @@
 import MyPos from './MyPosts.module.css';
 import React from 'react';
 import Post from './Posts/Post';
+import { addActionCreator, onPostChangeActionCreator } from '../../../Redux/ProfileReducer';
 
 const MyPosts = (props) => {
+  
   let PostsMassive = props.postData.map(p => <Post message={p.message} like={p.like} />);
 
  let elementPost = React.useRef();
- 
+
  let addPost= () =>{
   let text = elementPost.current.value;
-   props.dispatch({type:'ADD-POST'});
+    props.addActionCreator();
    elementPost.current.value='';
  }
   let onPostChange = () =>{
     let text = elementPost.current.value;
-    props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
-    
+    props.onPostChangeActionCreator(text);   
   }
 
   return (
@@ -24,7 +25,7 @@ const MyPosts = (props) => {
         My posts
         <div className={MyPos.newPosts}>
           <div>
-          <textarea onChange={onPostChange} ref={elementPost}/>
+          <textarea onChange={onPostChange} ref={elementPost} placeholder='New text'/>
           </div>
           <button onClick={addPost}>Add post</button>
         </div>

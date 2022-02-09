@@ -12,6 +12,7 @@ import Setting from './components/Setting/Setting';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import Friend from './components/Friends/Friends';
 import friendList from './components/Friends/FriendsHeader/headerFriend';
+import DialogsComponent from './components/Dialogs/DialogsComponent';
 
 
 const App = (props) => {
@@ -24,9 +25,9 @@ const App = (props) => {
           <Nav />
           
           <Routes>
-            <Route exact='' path="/Dialogs/*" element={<Dialogs newMyText={props.newMyText} ForMe={props.state.dialogPage.ForMe} newMes={props.newMes} state={props.state.dialogPage} myMes={props.myMes} newMyText={props.newMyText}/>}/>
+            <Route exact='' path="/Dialogs/*" element={<DialogsComponent store={props.store}/>}/>
 
-            <Route path="/profile" element={<Profile post={props.state.profilePage} dispatch={props.dispatch} addPost={props.addPost}/>} />
+            <Route path="/profile" element={<Profile store={props.store}/>} />
             
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />
