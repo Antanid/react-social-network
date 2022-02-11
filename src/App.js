@@ -1,18 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import beachImg from './../src/img/beach.jpg';
 import Header from './components/Header/Header';
 import Nav from './components/Navbar/Nav';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Setting from './components/Setting/Setting';
-import { propTypes } from 'react-bootstrap/esm/Image';
-import Friend from './components/Friends/Friends';
-import friendList from './components/Friends/FriendsHeader/headerFriend';
-import DialogsComponent from './components/Dialogs/DialogsComponent';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
+import FriendsContainer from './components/Friends/FriendsContainer';
+
 
 
 const App = (props) => {
@@ -25,14 +22,13 @@ const App = (props) => {
           <Nav />
           
           <Routes>
-            <Route exact='' path="/Dialogs/*" element={<DialogsComponent store={props.store}/>}/>
-
-            <Route path="/profile" element={<Profile store={props.store}/>} />
+            <Route exact='' path="/Dialogs/*" element={<DialogsContainer/>}/>
+            <Route path="/profile" element={<Profile/>} />
             
             <Route path="/news" element={<News/>} />
             <Route path="/music" element={<Music/>} />
             <Route path="/setting" element={<Setting/>} />
-            <Route path='/Friends' element={<Friend/>}/>
+            <Route path='/Friends' element={<FriendsContainer/>}/>
           </Routes>
           
         </div>

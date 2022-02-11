@@ -1,4 +1,4 @@
-import friendList from '../Friends/FriendsHeader/headerFriend';
+
 import music from './Music.module.css';
 const Music = (props) =>{
     return(

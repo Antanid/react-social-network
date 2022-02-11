@@ -1,7 +1,7 @@
 const MY_NEW_MESSAGE = 'MY-NEW-MESSAGE';
 const NEW_TEXT_MESSAGE = 'NEW-TEXT-MESSAGE';
 let initialState = {
- messagesData: [
+  messagesData: [
     { id: 1, img: 'http://i.imgur.com/0yutzSE.png', message: 'Anton--- Hello!' },
     { id: 2, img: 'http://i.imgur.com/0yutzSE.png', message: '--- Anton --- How are you?' },
     { id: 3, img: 'http://i.imgur.com/0yutzSE.png', message: '--- Anton--- ITS AMAZING!' },
@@ -13,22 +13,25 @@ let initialState = {
     { id: 3, name: 'Sveta' },
     { id: 4, name: 'Vasya' },],
 
-  ForMe: 'Priyom',
+  ForMe: 'Hello',
 };
 const dialogReducer = (State = initialState, action) => {
   switch (action.type) {
     case MY_NEW_MESSAGE:
-      let addMyMess = {
-        id: 5,
-        img: 'http://i.imgur.com/0yutzSE.png',
-        message: State.ForMe,
-      }
-      State.messagesData.push(addMyMess);
-      return State;
-
+      return {
+        ...State,
+        messagesData: [...State.messagesData, {
+          id: 5,
+          img: 'http://i.imgur.com/0yutzSE.png',
+          message: State.ForMe,
+        }],
+        ForMe: '',
+      };
     case NEW_TEXT_MESSAGE:
-      State.ForMe = action.textArea;
-      return State;
+      return {
+        ...State,
+        ForMe: action.textArea,
+      };
     default:
       return State;
   }

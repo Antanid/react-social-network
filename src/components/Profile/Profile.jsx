@@ -1,5 +1,4 @@
-import MyPosts from "./MyPosts/MyPosts";
-import MyPostsContainer from "./MyPosts/MyPostsComponent";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import prof from "./Profile.module.css";
 import ProfInfo from "./ProfileInfo/ProfileInfo";
 const Profile = (props) => {
@@ -8,7 +7,7 @@ const Profile = (props) => {
     <div className='col-lg-10'>
       <div className={prof.content}>
         <ProfInfo />
-        <MyPostsContainer store={props.store}/>
+        <MyPostsContainer />
       </div>
     </div>
   );
